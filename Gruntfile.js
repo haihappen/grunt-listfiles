@@ -38,7 +38,8 @@ module.exports = function (grunt) {
         eol: 'lf',
         prefix: '\t\t\'',
         postfix: '\',',
-        postfixLastLine: '\''
+        postfixLastLine: '\'',
+        modify: 'f.replace(".min", "")'
       },
       test1: {
         files: {

@@ -49,6 +49,12 @@ module.exports = function (grunt) {
         }
       });
 
+      if(options.modify) {
+        src = src.map(function(f) {
+          return eval("f = " + options.modify);
+        });
+      }
+
       // Add prefix and postfix to each line
       var i,
           l = src.length,
